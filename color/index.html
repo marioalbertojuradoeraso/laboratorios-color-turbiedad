@@ -438,7 +438,7 @@
   </style>
 </head>
 
-<body>
+<body data-publication-loading="true"><style>body[data-publication-loading]>:not(#publication-loader){visibility:hidden!important}#publication-loader{position:fixed;inset:0;z-index:99999;display:grid;place-content:center;text-align:center;padding:25px;background:#f7f8f2;color:#173e3a;font:18px/1.6 "Segoe UI",sans-serif}#publication-loader strong{font:36px Georgia,serif;margin-bottom:14px}#publication-loader small{color:#59716b}</style><div id="publication-loader" role="status" aria-live="polite"><strong>Preparando el laboratorio…</strong><span>Estamos cargando los dibujos, las voces y los experimentos.</span><small>La primera visita puede tardar unos segundos.</small></div>
   <main id="app">
     <header class="topbar">
       <div class="brand">
@@ -656,5 +656,5 @@
 buildDots();
     renderScene();
   </script>
-</body>
+<script>(()=>{if(true){document.body.removeAttribute("data-publication-loading");document.getElementById("publication-loader").remove()}else{document.getElementById("publication-loader").textContent="No se pudo iniciar el laboratorio. Recarga la página para volver a intentarlo."}})();</script></body>
 </html>
